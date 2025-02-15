@@ -129,7 +129,7 @@ Your job is to devise detailed plans to complete the user_proxy's assignment, an
         termination_condition=termination,
     )
     # 读取Excel文件中的第一列任务
-    excel_file = r"E:\ysd\AutoGen_test\data_tiny.xlsx"
+    excel_file = r"*\data_tiny.xlsx"
     df = pd.read_excel(excel_file)
 
     # 获取第一列，从第二行开始
