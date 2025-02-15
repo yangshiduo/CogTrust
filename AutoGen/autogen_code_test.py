@@ -42,7 +42,7 @@ class MyHandler(logging.Handler):
 
 model_client = OpenAIChatCompletionClient(
     model="gpt-4o-mini",
-    api_key="sk-proj-GEh9CJeWGCN24NBl3wV5T3BlbkFJI7cTgcvatBlSJLwkjwyj",
+    api_key="",
     # Optional if you have an OPENAI_API_KEY env variable set.
 )
 

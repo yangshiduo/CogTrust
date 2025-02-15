@@ -110,18 +110,18 @@ Matching (assistant_description, assistant_message): matching
 google_tool = FunctionTool(SearchToolkit().search_google)
 tools_list = [ google_tool ]
 
-OPENAI_API_KEY = 'sk-8BZb57ebeebc0dca185f069e86bbf6e445e369fdf63yzPvn'
-OPENAI_API_BASE_URL = 'https://api.gptsapi.net/v1'
+OPENAI_API_KEY = ''
+OPENAI_API_BASE_URL = ''
 os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
 os.environ['OPENAI_API_BASE_URL'] = OPENAI_API_BASE_URL
 
-ANTHROPIC_API_KEY = 'sk-Y2Qa916ade7a14a2fb26425714fdfa5e42cd6876d2aID49J'
-ANTHROPIC_API_BASE_URL = 'https://api.gptsapi.net'
+ANTHROPIC_API_KEY = ''
+ANTHROPIC_API_BASE_URL = ''
 os.environ['ANTHROPIC_API_KEY'] = ANTHROPIC_API_KEY
 os.environ['ANTHROPIC_API_BASE_URL'] = ANTHROPIC_API_BASE_URL
 
-GOOGLE_API_KEY = 'AIzaSyBeVNqtNw50ac2gr5xDKAbqiO41a3yk174'
-SEARCH_ENGINE_ID = 'b4f88face84de45eb'
+GOOGLE_API_KEY = ''
+SEARCH_ENGINE_ID = ''
 os.environ['GOOGLE_API_KEY'] = GOOGLE_API_KEY
 os.environ['SEARCH_ENGINE_ID'] = SEARCH_ENGINE_ID
 

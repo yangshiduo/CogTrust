@@ -20,8 +20,8 @@ So please response below task based on above description. You must understand th
 """
 model_client = OpenAIChatCompletionClient(
     model="gpt-3.5-turbo-0125",
-    api_key="sk-8BZb57ebeebc0dca185f069e86bbf6e445e369fdf63yzPvn",
-    base_url="https://api.gptsapi.net/v1"
+    api_key="",
+    base_url=""
     # Optional if you have an OPENAI_API_KEY env variable set.
 )
 
@@ -38,13 +38,13 @@ def google_search(query: str, num_results: int = 2, max_chars: int = 500) -> lis
     #api_key = os.getenv("GOOGLE_API_KEY")
     #search_engine_id = os.getenv("GOOGLE_SEARCH_ENGINE_ID")
 
-    api_key = "AIzaSyBeVNqtNw50ac2gr5xDKAbqiO41a3yk174"
-    search_engine_id = "b4f88face84de45eb"
+    api_key = ""
+    search_engine_id = ""
 
     if not api_key or not search_engine_id:
         raise ValueError("API key or Search Engine ID not found in environment variables")
 
-    url = "https://www.googleapis.com/customsearch/v1"
+    url = ""
     params = {"key": api_key, "cx": search_engine_id, "q": query, "num": num_results}
 
     response = requests.get(url, params=params)  # type: ignore[arg-type]

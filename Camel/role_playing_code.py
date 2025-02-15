@@ -18,7 +18,7 @@ from camel.toolkits.code_execution import CodeExecutionToolkit
 toolkit = CodeExecutionToolkit(verbose=False)
 tools = toolkit.get_tools()
 
-OPENAI_API_KEY = 'sk-proj-GEh9CJeWGCN24NBl3wV5T3BlbkFJI7cTgcvatBlSJLwkjwyj'
+OPENAI_API_KEY = ''
 os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
 
 def extract_executed_results(text):

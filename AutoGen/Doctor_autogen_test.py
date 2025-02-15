@@ -24,8 +24,8 @@ So please response below task based on above description. You must understand th
 """
 model_client = OpenAIChatCompletionClient(
     model="gpt-3.5-turbo-0125",
-    api_key="sk-8BZb57ebeebc0dca185f069e86bbf6e445e369fdf63yzPvn",
-    base_url="https://api.gptsapi.net/v1"
+    api_key="",
+    base_url=""
     # Optional if you have an OPENAI_API_KEY env variable set.
 )
 
