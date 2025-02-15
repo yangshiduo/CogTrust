@@ -24,8 +24,8 @@ So please response below task based on above description. You must understand th
 """
 model_client = OpenAIChatCompletionClient(
     model="gpt-3.5-turbo-0125",
-    api_key="",
-    base_url=""
+    api_key="*",
+    base_url="*"
     # Optional if you have an OPENAI_API_KEY env variable set.
 )
 
@@ -160,7 +160,7 @@ Your job is to devise detailed plans to complete the user_proxy's assignment, an
         termination_condition=termination,
     )
 
-    excel_file = r"E:\ysd\AutoGen_test\data_tiny.xlsx"
+    excel_file = r"*\data_tiny.xlsx"
     df = pd.read_excel(excel_file)
 
     tasks = df.iloc[61:125, 0].dropna().tolist()
@@ -205,7 +205,7 @@ Your job is to devise detailed plans to complete the user_proxy's assignment, an
                     })
 
         result_df = pd.DataFrame(task_results)
-        file_name = rf"E:\ysd\AutoGen_test\doctor_gpt3.5_dangerous_prompt_injection\task_results_{index + 1}.xlsx"
+        file_name = rf"*\task_results_{index + 1}.xlsx"
         result_df.to_excel(file_name, index=False)
         print(f"Task {index + 1} results saved to {file_name}")
 

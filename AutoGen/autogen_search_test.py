@@ -20,8 +20,8 @@ So please response below task based on above description. You must understand th
 """
 model_client = OpenAIChatCompletionClient(
     model="gpt-3.5-turbo-0125",
-    api_key="",
-    base_url=""
+    api_key="*",
+    base_url="*"
     # Optional if you have an OPENAI_API_KEY env variable set.
 )
 
@@ -82,9 +82,9 @@ def google_search(query: str, num_results: int = 2, max_chars: int = 500) -> lis
     return enriched_results
 
 async def main() -> None:
-    """google_search_tool = FunctionTool(
+    google_search_tool = FunctionTool(
         google_search, description="Search Google for information, returns results with a snippet and body content"
-    )"""
+    )
     google_search_agent = AssistantAgent(
         name="assistant_agent",
         #tools=[google_search],
@@ -187,7 +187,7 @@ Your job is to devise detailed plans to complete the user_proxy's assignment, an
         result_df = pd.DataFrame(task_results)
 
         # 根据 index 命名文件并保存到 Excel
-        file_name = rf"E:\ysd\AutoGen_test\police_gpt3.5_dangerous_prompt_injection\task_results_{index + 1}.xlsx"
+        file_name = rf"*\task_results_{index + 1}.xlsx"
         result_df.to_excel(file_name, index=False)
         print(f"Task {index + 1} results saved to {file_name}")
         #await Console(team.run_stream(task=task_prompt_file))

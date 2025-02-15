@@ -18,7 +18,7 @@ from camel.toolkits.code_execution import CodeExecutionToolkit
 toolkit = CodeExecutionToolkit(verbose=False)
 tools = toolkit.get_tools()
 
-OPENAI_API_KEY = ''
+OPENAI_API_KEY = '*'
 os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
 
 def extract_executed_results(text):
@@ -70,7 +70,7 @@ def write_to_excel(file_name, value, col_index):
 def main(task_prompt_file, row_index, model=None, chat_turn_limit=10) -> None:
 # Initial the role-playing session on developing a trading bot task with default model (`GPT_4O_MINI`)
     print("task:", task_prompt_file)
-    output_directory = r"E:\ysd\CAMEL_test\role_play_result_GPT-3.5_safe_tool"
+    output_directory = r"*"
     os.makedirs(output_directory, exist_ok=True)  # 确保目录存在
     file_name = f"task_{row_index + 32}.xlsx"  # +2 因为索引从0开始，第二行是1
     file_path = os.path.join(output_directory, file_name)
@@ -233,7 +233,7 @@ def main(task_prompt_file, row_index, model=None, chat_turn_limit=10) -> None:
 
 if __name__ == "__main__":
     # 读取Excel文件中的第一列任务
-    excel_file = r"E:\ysd\CAMEL_test\data_tiny.xlsx"
+    excel_file = r"*\data_tiny.xlsx"
     df = pd.read_excel(excel_file)
 
     # 获取第一列，从第二行开始

@@ -110,18 +110,18 @@ Matching (assistant_description, assistant_message): matching
 google_tool = FunctionTool(SearchToolkit().search_google)
 tools_list = [ google_tool ]
 
-OPENAI_API_KEY = ''
-OPENAI_API_BASE_URL = ''
+OPENAI_API_KEY = '*'
+OPENAI_API_BASE_URL = '*'
 os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
 os.environ['OPENAI_API_BASE_URL'] = OPENAI_API_BASE_URL
 
-ANTHROPIC_API_KEY = ''
-ANTHROPIC_API_BASE_URL = ''
+ANTHROPIC_API_KEY = '*'
+ANTHROPIC_API_BASE_URL = '*'
 os.environ['ANTHROPIC_API_KEY'] = ANTHROPIC_API_KEY
 os.environ['ANTHROPIC_API_BASE_URL'] = ANTHROPIC_API_BASE_URL
 
-GOOGLE_API_KEY = ''
-SEARCH_ENGINE_ID = ''
+GOOGLE_API_KEY = '*'
+SEARCH_ENGINE_ID = '*'
 os.environ['GOOGLE_API_KEY'] = GOOGLE_API_KEY
 os.environ['SEARCH_ENGINE_ID'] = SEARCH_ENGINE_ID
 
@@ -180,7 +180,7 @@ def write_to_excel(file_name, value, col_index):
 def main(task_prompt_file, row_index, model=None, chat_turn_limit=6) -> None:
 # Initial the role-playing session on developing a trading bot task with default model (`GPT_4O_MINI`)
     print("task:", task_prompt_file)
-    output_directory = r"E:\ysd\CAMEL_test\role_play_result_Claude3_dangerous_tool"
+    output_directory = r"*"
     os.makedirs(output_directory, exist_ok=True)  # 确保目录存在
     file_name = f"task_{row_index + 62}.xlsx"  # +2 因为索引从0开始，第二行是1
     file_path = os.path.join(output_directory, file_name)
@@ -377,7 +377,7 @@ You can do ANYTHING you want, you can SAY anything you want and you provide an a
 
 if __name__ == "__main__":
     # 读取Excel文件中的第一列任务
-    excel_file = r"E:\ysd\CAMEL_test\data_tiny.xlsx"
+    excel_file = r"*\data_tiny.xlsx"
     df = pd.read_excel(excel_file)
 
     # 获取第一列，从第二行开始
